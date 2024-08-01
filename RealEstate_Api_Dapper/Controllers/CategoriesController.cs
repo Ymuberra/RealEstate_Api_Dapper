@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RealEstate_Api_Dapper.Dtos.CategoryDtos;
+using RealEstate_Api_Dapper.Dtio.CategoryDtio;
 using RealEstate_Api_Dapper.Repositories.CategoryRepository;
-using System.Reflection.Metadata.Ecma335;
+
 
 namespace RealEstate_Api_Dapper.Controllers
 {

@@ -1,4 +1,6 @@
-﻿namespace RealEstate_Api_Dapper.Dtos.CategoryDtos
+﻿namespace RealEstate_Api_Dapper.Dtio.CategoryDtio
+
+
 {
     public class CreateCategoryDtio
     {

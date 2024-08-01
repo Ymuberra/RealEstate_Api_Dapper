@@ -1,4 +1,4 @@
-﻿using RealEstate_Api_Dapper.Dtos.CategoryDtos;
+﻿using RealEstate_Api_Dapper.Dtio.CategoryDtio;
 using RealEstate_Api_Dapper.Models.DapperContext;
 using Dapper;
 

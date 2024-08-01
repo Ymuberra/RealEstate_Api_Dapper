@@ -1,4 +1,4 @@
-﻿using RealEstate_Api_Dapper.Dtos.CategoryDtos;
+﻿using RealEstate_Api_Dapper.Dtio.CategoryDtio;
 
 namespace RealEstate_Api_Dapper.Repositories.CategoryRepository
 {
