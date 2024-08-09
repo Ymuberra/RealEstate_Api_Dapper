@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate_Dapper_UI.Views.Shared.Components
+namespace RealEstate_Dapper_UI.ViewComponents.AdminLayout
 {
-    public class DefaultScriptComponentPartial:ViewComponent
+    public class _AdminLayoutFooterComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {
             return View();
         }
+
     }
 }

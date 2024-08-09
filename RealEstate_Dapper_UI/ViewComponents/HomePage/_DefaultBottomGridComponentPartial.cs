@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealEstate_Dapper_UI.Dtios.ProductDtios;
+using RealEstate_Dapper_UI.Dtios.BottomGridDtio;
+
 
 namespace RealEstate_Dapper_UI.ViewComponents.HomePage
 {
-    public class _DefaultHomePageProductList : ViewComponent
+    public class _DefaultBottomGridComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _DefaultHomePageProductList(IHttpClientFactory httpClientFactory)
+        public _DefaultBottomGridComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -16,11 +17,11 @@ namespace RealEstate_Dapper_UI.ViewComponents.HomePage
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:44369/api/Products/ProductListWithCategory");
+            var responseMessage = await client.GetAsync("https://localhost:44369/api/BottomGrids");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultProductDtios>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultBottomGridDtio>>(jsonData);
                 return View(values);
             }
             return View();
